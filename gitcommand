@@ -1,0 +1,36 @@
+ng 8470fa4..a79a824
+Fast-forward
+ index.html | 1 +
+ 1 file changed, 1 insertion(+)
+[root@git automation]# git diff
+[root@git automation]# vi gitcommand
+[root@git automation]# history
+    1  hostname
+    2  clear
+    3  cd automation/
+    4  ls
+    5  git init
+    6  ls -l
+    7  ls -la
+    8  pwd
+    9  ls -ltra
+   10  cd .git
+   11  ls la
+   12  ls -la
+   13  cd ..
+   14  clear
+   15  git config --global.name "khadak
+   16  git config --global.name "khadak"
+   17  clear
+   18  git config --global user.name "khadak"
+   19  git config --global user.email "khadakbogati86@gmail.com"
+   20  git confgi --list
+   21  git config --list
+   22  touch README.txt
+   23  vi README.txt 
+   24  cat README.txt 
+   25  ls
+   26  vi index.html
+   27  git staus
+   28  'clear
+
