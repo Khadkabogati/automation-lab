@@ -1,0 +1,106 @@
+1  ifconfig
+    2  vi /etc/hosts
+    3  ping puppetmaster.unixcloudfusion.in
+    4  ping puppetclient.unixcloudfusion.in
+    5  cat /etc/hosts
+    6  clear
+    7  wget -O puppet-enterprise-el-7-x86_64.tar.gz 'https://pm.puppet.com/cgi-bin/download.cgi?arch=x86_64&dist=el&rel=7&ver=latest'
+    8  clear
+    9  mkdir puppet
+   10  mv puppet-enterprise-el-7-x86_64.tar.gz puppet
+   11  cd puppet/
+   12  ls -ltr
+   13  tar -xvf puppet-enterprise-el-7-x86_64.tar.gz
+   14  du -sh puppet-enterprise-el-7-x86_64.tar.gz
+   15  cd puppet-enterprise-2019.0.2-el-7-x86_64/
+   16  pwd
+   17  ./puppet-enterprise-installer
+   18  cat /var/log/puppetlabs/installer/2019-03-17T14.45.30+0000.install.log
+   19  tail -500 /var/log/puppetlabs/installer/2019-03-17T14.45.30+0000.install.log
+   20  /opt/puppetlabs/puppet/bin/puppet infrastructure configure --debug --detailed-exitcodes --environmentpath /opt/puppetlabs/server/data/environments --environment enterprise --no-noop --install=2019.0.2 --install-method='web'
+   21  clear
+   22  cd /etc/puppetlabs/code/environments/production/manifests/
+   23  ls -ltr
+   24  cd ../../
+   25  ls
+   26  mkdir dev
+   27  cd stage
+   28  mkdir stage
+   29  ls
+   30  cd production/
+   31  ls -ltr
+   32  cd manifests/
+   33  ls -ltr
+   34  clear
+   35  vi site.pp
+   36  id ankit
+   37  cat site.pp
+   38  ln -s /opt/puppetlabs/bin/puppet /usr/local/bin/puppet
+   39  /usr/local/bin/puppet -v
+   40  clear
+   41  /usr/local/bin/puppet --version
+   42  /usr/local/bin/puppet parser validate site.pp
+   43  /usr/local/bin/puppet apply --noop site.pp
+   44  id ankit
+   45  /usr/local/bin/puppet apply site.pp
+   46  id ankit
+   47  pwd
+   48  cd ..
+   49  ls -ltr
+   50  cd modules/
+   51  ls -ltr
+   52  mkdir motd
+   53  cd motd/
+   54  mkdir manifests
+   55  mkdir examples
+   56  mkdir files
+   57  mkdir templates
+   58  mkdir lib
+   59  mkdir facts.d
+   60  mkdir spec
+   61  ls
+   62  cd manifests/
+   63  pwd
+   64  vi init.pp
+   65  /usr/local/bin/puppet parser validate init.pp
+   66  cd ..
+   67  pwd
+   68  cd files/
+   69  vi motd
+   70  cat ../manifests/init.pp
+   71  pwd
+   72  vi motd
+   73  pwd
+   74  cd ../../../
+   75  cd manifests/
+   76  vi site.pp
+   77  /usr/local/bin/puppet apply --noop site.pp
+   78  /usr/local/bin/puppet apply site.pp
+   79  /usr/local/bin/facter
+   80  cd ..
+   81  cd modules/motd/
+   82  ll
+   83  cd manifests/
+   84  ls -ltr
+   85  vi init.pp
+   86  /usr/local/bin/facter | grep -A 5 -B 5 domain
+   87  vi init.pp
+   88  /usr/local/bin/puppet parser validate init.pp
+   89  /usr/local/bin/puppet apply --noop init.pp
+   90  cd ../
+   91  cd ../..
+   92  cd manifests/
+   93  cat site.pp
+   94  /usr/local/bin/puppet apply site.pp
+   95  puppet module install puppetlabs-apache --version 4.0.0
+   96  /usr/local/bin/puppet module install puppetlabs-apache --version 4.0.0
+   97  cd /etc/puppetlabs/code/environments/production/modules
+   98  ls -ltr
+   99  cd apache/
+  100  ls -ltr
+  101  cat README.md
+  102  ls ltr
+  103  ls -ltr
+  104  cd manifests/
+  105  ls -ltr
+  106  history
